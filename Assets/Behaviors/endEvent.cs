@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class endEvent : StateMachineBehaviour {
-
+	public string nextSequence;
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		animator.gameObject.transform.parent.GetComponent<Animator>().SetTrigger("nextSequence_01");
+		animator.gameObject.transform.parent.GetComponent<Animator>().SetTrigger(nextSequence);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
