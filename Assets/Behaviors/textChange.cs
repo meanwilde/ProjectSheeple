@@ -28,6 +28,9 @@ public class textChange : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		GameObject child = animator.gameObject.transform.GetChild(0).gameObject;
+		child.GetComponent<Animator>().SetTrigger("nextEvent");
+
 		Transform textBox = animator.gameObject.transform.GetChild(0).gameObject.transform;
 
 		Text headerTextBox = textBox.GetChild(1).gameObject.GetComponent<Text>();

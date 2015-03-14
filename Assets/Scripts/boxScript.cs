@@ -3,6 +3,7 @@ using System.Collections;
 
 public class boxScript : MonoBehaviour {
 	GameObject em;
+	public string nextBoxTrigger;
 	// Use this for initialization
 	void Awake () {
 		em = GameObject.FindGameObjectWithTag("eventManager");
@@ -21,4 +22,9 @@ public class boxScript : MonoBehaviour {
 	public void pressButton () {
 		this.GetComponent<Animator>().SetTrigger("buttonPress");
 	}
+
+	public void setnextTrigger (string triggerName) {
+		nextBoxTrigger = triggerName;
+	}
 }
+

@@ -5,7 +5,7 @@ public class changeEvent : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		animator.gameObject.transform.parent.GetComponent<Animator>().SetTrigger("nextState_01");
+		animator.gameObject.transform.parent.GetComponent<Animator>().SetTrigger(animator.gameObject.GetComponent<boxScript>().nextBoxTrigger);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
