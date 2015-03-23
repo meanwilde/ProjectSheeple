@@ -28,8 +28,10 @@ public class textChange : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		//get Text Box
 		GameObject child = animator.gameObject.transform.GetChild(0).gameObject;
-		child.GetComponent<Animator>().SetTrigger("nextEvent");
+		
+
 
 		Transform textBox = animator.gameObject.transform.GetChild(0).gameObject.transform;
 
@@ -62,6 +64,9 @@ public class textChange : StateMachineBehaviour {
 		Button button6 = textBox.GetChild(3).gameObject.transform.GetChild(5).GetComponent<Button>();
 		button6.gameObject.SetActive(button6Enabled);
 		button6.gameObject.transform.GetChild(0).GetComponent<Text>().text = button6Text;
+
+		//activate next event
+		child.GetComponent<Animator>().SetTrigger("nextEvent");
 
 	}
 

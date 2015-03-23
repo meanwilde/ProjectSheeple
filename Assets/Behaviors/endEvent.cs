@@ -5,6 +5,7 @@ public class endEvent : StateMachineBehaviour {
 	public string nextSequence;
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		//activates the next event
 		animator.gameObject.transform.parent.GetComponent<Animator>().SetTrigger(nextSequence);
 	}
 

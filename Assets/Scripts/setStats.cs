@@ -12,6 +12,8 @@ public class setStats : MonoBehaviour {
 	public Text defense;
 	public Text food;
 	public Text moral;
+	public Text distance;
+	public Text speed;
 	// Use this for initialization
 	void Start () {
 		sm = GameObject.FindGameObjectWithTag("statmanager");
@@ -27,5 +29,7 @@ public class setStats : MonoBehaviour {
 		defense.text = smScript.defense.ToString();
 		food.text = smScript.food.ToString();
 		moral.text = smScript.moral.ToString();
+		distance.text = smScript.distance.ToString();
+		speed.text = smScript.speed.ToString();
 	}
 }

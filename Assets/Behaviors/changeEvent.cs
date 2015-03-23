@@ -5,6 +5,7 @@ public class changeEvent : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		//activate next panel
 		animator.gameObject.transform.parent.GetComponent<Animator>().SetTrigger(animator.gameObject.GetComponent<boxScript>().nextBoxTrigger);
 	}
 

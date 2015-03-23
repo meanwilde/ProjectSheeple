@@ -21,6 +21,10 @@ public class stats : MonoBehaviour {
 	public int food;
 	[HideInInspector]
 	public int moral;
+	[HideInInspector]
+	public float distance = 0;
+	[HideInInspector]
+	public int speed;
 
 
 	// Use this for initialization
@@ -35,5 +39,6 @@ public class stats : MonoBehaviour {
 	void Update () {
 		population = sheeple + warriors;
 		defense = warriorDefense * warriors;
+		speed = population/3;
 	}
 }
